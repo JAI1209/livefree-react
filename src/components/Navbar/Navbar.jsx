@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { ChevronDown, MapPin, Heart, Home, Info, Compass, Users } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import styles from './Navbar.module.css'
-import logoImg from '../../assets/logo.jpg'
+import logoImg from '../../assets/l1.png'
 
 const ABOUT_ITEMS = [
   { label: 'About Us', sub: 'Our story & people', icon: <Info size={15} />, path: '/about' },
@@ -44,7 +44,7 @@ export default function Navbar() {
   const navRef = useRef(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
