@@ -1,0 +1,109 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+  isolation: isolate;
+  transition: var(--transition);
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.card:hover .img { transform: scale(1.07); }
+.card:hover .overlay { background: rgba(0,0,0,0.45); }
+.card:hover .arrow { opacity: 1; transform: translateX(0); }
+
+.img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease-out);
+}
+
+/* Replace with real images → see siteData.js comments */
+.imgFallback {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #c0a882, #8c7b6b);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.78) 0%,
+    rgba(0,0,0,0.26) 55%,
+    rgba(0,0,0,0.08) 100%
+  );
+  transition: background 0.35s ease;
+}
+
+.body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 28px;
+  color: #fff;
+  z-index: 1;
+}
+
+.tagline {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: var(--transition);
+}
+.arrow::after {
+  content: '→';
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .grid > :last-child { grid-column: 1 / -1; aspect-ratio: 16/9; }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .grid > :last-child { grid-column: auto; aspect-ratio: 3/4; }
+  .card { aspect-ratio: 4/5; }
+}
