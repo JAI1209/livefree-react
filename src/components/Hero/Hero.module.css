@@ -5,9 +5,9 @@
   align-items: center;
   overflow: hidden;
   isolation: isolate;
+  /* No fullBleed needed — #root is now truly full width */
 }
 
-/* ── Background ── */
 .bg {
   position: absolute;
   inset: 0;
@@ -23,8 +23,6 @@
 }
 .hero:hover .bgImg { transform: scale(1); }
 
-/* Add hero background image here ↓ */
-/* Replace the gradient below with: background-image: url('/assets/hero_img.jpeg'); */
 .bgFallback {
   position: absolute;
   inset: 0;
@@ -43,7 +41,6 @@
   z-index: 1;
 }
 
-/* ── Content ── */
 .content {
   position: relative;
   z-index: 2;
@@ -51,7 +48,7 @@
   max-width: 580px;
   margin-left: 0;
   margin-right: auto;
-  padding-left: 5%;  /* ← yeh add karo */
+  padding-left: 5%;
 }
 
 .eyebrow {
@@ -102,7 +99,6 @@
   flex-wrap: wrap;
 }
 
-/* ── Scroll cue ── */
 .scrollCue {
   position: absolute;
   bottom: 36px;
@@ -130,11 +126,10 @@
   50% { opacity: 1; transform: scaleY(0.7); }
 }
 
-/* ── Trust badges ── */
 .badges {
   position: absolute;
   bottom: 40px;
-  right: 24px;  /* 0 se 24px karo */
+  right: 5%;
   z-index: 3;
   display: flex;
   flex-direction: column;

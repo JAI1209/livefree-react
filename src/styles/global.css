@@ -64,6 +64,43 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 ul, ol { list-style: none; }
 input, textarea, select { font-family: inherit; }
 
+/* ── Root layout
+   FIX: width:100% + max-width instead of fixed 1126px.
+   Old border-inline moved to visual-only pseudo-elements
+   so it never shrinks the layout width for gallery pages.
+── */
+#root {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: clip;
+}
+
+/* Decorative side borders — visual only, zero layout impact */
+#root::before,
+#root::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0,0,0,0.07);
+  pointer-events: none;
+  z-index: 9999;
+}
+#root::before { left: calc((100vw - var(--container)) / 2); }
+#root::after  { right: calc((100vw - var(--container)) / 2); }
+
+@media (max-width: 1280px) {
+  #root::before,
+  #root::after { display: none; }
+}
+
 /* ── Container ── */
 .container {
   max-width: var(--container);
