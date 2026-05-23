@@ -423,3 +423,142 @@ export const CITY_ITINERARY = {
     },
   ],
 }
+
+// ============================================================
+//  PROPERTY POLICY — Update per city below
+//  Each city has an array of policy points.
+//  Edit the text inside each string as needed.
+// ============================================================
+
+export const CITY_PROPERTY_POLICY = {
+  rishikesh: [
+    // TODO: Replace with actual property policies for Rishikesh
+    'Guests must present a valid government-issued ID at check-in.',
+    'Quiet hours are strictly observed from 11:00 PM to 7:00 AM.',
+    'No outside alcohol is permitted on the premises.',
+    'Smoking is only allowed in designated outdoor areas.',
+    'Common areas must be kept clean — please wash your dishes after use.',
+    'Visitors (non-guests) are not allowed inside dormitory areas.',
+    'The hostel is not responsible for loss of valuables — use the provided lockers.',
+    'Pets are not allowed anywhere on the property.',
+  ],
+  dehradun: [
+    // TODO: Replace with actual property policies for Dehradun
+    'Guests must present a valid government-issued ID at check-in.',
+    'Quiet hours are strictly observed from 11:00 PM to 7:00 AM.',
+    'No outside alcohol is permitted on the premises.',
+    'Smoking is only allowed in designated outdoor areas.',
+    'Common areas must be kept clean — please wash your dishes after use.',
+    'Visitors (non-guests) are not allowed inside dormitory areas.',
+    'The hostel is not responsible for loss of valuables — use the provided lockers.',
+    'Pets are not allowed anywhere on the property.',
+  ],
+  varanasi: [
+    // TODO: Replace with actual property policies for Varanasi
+    'Guests must present a valid government-issued ID at check-in.',
+    'Quiet hours are strictly observed from 11:00 PM to 7:00 AM.',
+    'No outside alcohol is permitted on the premises.',
+    'Smoking is only allowed in designated outdoor areas.',
+    'Common areas must be kept clean — please wash your dishes after use.',
+    'Visitors (non-guests) are not allowed inside dormitory areas.',
+    'The hostel is not responsible for loss of valuables — use the provided lockers.',
+    'Pets are not allowed anywhere on the property.',
+  ],
+}
+
+// ============================================================
+//  MUST READS — Helpful articles/tips shown on property page
+//  Each city has an array of cards.
+//  Edit title, desc, and link for each card.
+//  'tag' is a small label shown on the card (e.g. 'Tips', 'Guide')
+// ============================================================
+
+export const CITY_MUST_READS = {
+  rishikesh: [
+    {
+      // TODO: Replace with real article title
+      title: 'Top 10 Things to Do in Rishikesh',
+      // TODO: Replace with real description
+      desc: 'From sunrise yoga to river rafting — here is your complete guide to experiencing the best of Rishikesh.',
+      tag: 'Guide',                         // TODO: Update tag (e.g. 'Tips', 'Guide', 'Food', 'Adventure')
+      img: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+    {
+      // TODO: Replace with real article title
+      title: 'Best Cafes Near Laxman Jhula',
+      // TODO: Replace with real description
+      desc: 'A curated list of cozy cafes with river views, great chai, and the perfect backpacker vibe.',
+      tag: 'Food',                          // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+    {
+      // TODO: Replace with real article title
+      title: 'River Rafting in Rishikesh: Everything You Need to Know',
+      // TODO: Replace with real description
+      desc: 'Safety tips, best operators, ideal season, and what to expect on the rapids.',
+      tag: 'Adventure',                     // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+  ],
+  dehradun: [
+    {
+      // TODO: Replace with real article title
+      title: "A Traveller's Guide to Dehradun",
+      // TODO: Replace with real description
+      desc: 'Explore colonial architecture, pine forests, and the gateway to the great Himalayas.',
+      tag: 'Guide',                         // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+    {
+      // TODO: Replace with real article title
+      title: 'Day Trip to Mussoorie from Dehradun',
+      // TODO: Replace with real description
+      desc: 'Everything you need for a perfect day trip to the Queen of Hills — timings, transport, must-stops.',
+      tag: 'Day Trip',                      // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+    {
+      // TODO: Replace with real article title
+      title: "Robber's Cave & Sahastradhara: Nature Escapes Near Dehradun",
+      // TODO: Replace with real description
+      desc: 'Two iconic natural spots just a short ride from the hostel — perfect for a half-day adventure.',
+      tag: 'Nature',                        // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+  ],
+  varanasi: [
+    {
+      // TODO: Replace with real article title
+      title: 'The Soul of Varanasi: A First-Timer\'s Guide',
+      // TODO: Replace with real description
+      desc: 'Ancient ghats, morning rituals, and the electric energy of the oldest living city on earth.',
+      tag: 'Guide',                         // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+    {
+      // TODO: Replace with real article title
+      title: 'Best Street Food in Varanasi',
+      // TODO: Replace with real description
+      desc: 'Kachori sabzi, banarasi paan, lassi, and more — the ultimate food walk guide.',
+      tag: 'Food',                          // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1523239369189-4ed2aefc3a63?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+    {
+      // TODO: Replace with real article title
+      title: 'Sarnath Day Trip: Buddhism\'s Birthplace Near Varanasi',
+      // TODO: Replace with real description
+      desc: 'A peaceful half-day escape to where the Buddha gave his first sermon after enlightenment.',
+      tag: 'History',                       // TODO: Update tag
+      img: 'https://images.unsplash.com/photo-1541336032412-2048a6785400?w=600&q=80', // TODO: Replace with real image
+      link: '#',                            // TODO: Replace with real article link
+    },
+  ],
+}
